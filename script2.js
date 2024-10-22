@@ -104,7 +104,8 @@ function counter1() {
     x += 1;
 }
 
-
+var id=0;
+var iy=0;
 
 // prompt
 const addQues = ["./q/phy/10.png",
@@ -663,6 +664,7 @@ function circle1() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
+                ig+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -672,6 +674,7 @@ function circle1() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -715,7 +718,7 @@ function circle2() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -724,6 +727,7 @@ function circle2() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -766,7 +770,7 @@ function circle3() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -775,6 +779,7 @@ function circle3() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -817,7 +822,7 @@ function circle4() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -826,6 +831,7 @@ function circle4() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -868,7 +874,7 @@ function circle5() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -877,6 +883,7 @@ function circle5() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -919,7 +926,7 @@ function circle6() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -928,6 +935,7 @@ function circle6() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -970,7 +978,7 @@ function circle7() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -979,6 +987,7 @@ function circle7() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1021,7 +1030,7 @@ function circle8() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1030,6 +1039,7 @@ function circle8() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1072,7 +1082,7 @@ function circle9() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1081,6 +1091,7 @@ function circle9() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1124,7 +1135,7 @@ function circle10() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1141,6 +1152,7 @@ function circle10() {
             }} else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1195,7 +1207,7 @@ function circle11() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1204,6 +1216,7 @@ function circle11() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1247,7 +1260,7 @@ function circle12() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1256,6 +1269,7 @@ function circle12() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1299,7 +1313,7 @@ function circle13() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1308,6 +1322,7 @@ function circle13() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1351,7 +1366,7 @@ function circle14() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1360,6 +1375,7 @@ function circle14() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1403,7 +1419,7 @@ function circle15() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1412,6 +1428,7 @@ function circle15() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1454,7 +1471,7 @@ function circle16() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1463,6 +1480,7 @@ function circle16() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1505,7 +1523,7 @@ function circle17() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1514,6 +1532,7 @@ function circle17() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1556,7 +1575,7 @@ function circle18() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1565,6 +1584,7 @@ function circle18() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1607,7 +1627,7 @@ function circle19() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1625,6 +1645,7 @@ function circle19() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1677,7 +1698,7 @@ function circle20() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1686,6 +1707,7 @@ function circle20() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1729,7 +1751,7 @@ function circle21() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1738,6 +1760,7 @@ function circle21() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1781,7 +1804,7 @@ function circle22() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1790,6 +1813,7 @@ function circle22() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1833,7 +1857,7 @@ function circle23() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1842,6 +1866,7 @@ function circle23() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1885,7 +1910,7 @@ function circle24() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1894,6 +1919,7 @@ function circle24() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1937,7 +1963,7 @@ function circle25() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1946,6 +1972,7 @@ function circle25() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -1989,7 +2016,7 @@ function circle26() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -1998,6 +2025,7 @@ function circle26() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2041,7 +2069,7 @@ function circle27() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2050,6 +2078,7 @@ function circle27() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2093,7 +2122,7 @@ function circle28() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2110,6 +2139,7 @@ function circle28() {
             }} else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2163,7 +2193,7 @@ function circle29() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2172,6 +2202,7 @@ function circle29() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2213,7 +2244,7 @@ function circle30() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2222,6 +2253,7 @@ function circle30() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2263,7 +2295,7 @@ function circle31() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2272,6 +2304,7 @@ function circle31() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2313,7 +2346,7 @@ function circle32() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2322,6 +2355,7 @@ function circle32() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2363,7 +2397,7 @@ function circle33() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2372,6 +2406,7 @@ function circle33() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2413,7 +2448,7 @@ function circle34() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2422,6 +2457,7 @@ function circle34() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2463,7 +2499,7 @@ function circle35() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2472,6 +2508,7 @@ function circle35() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2513,7 +2550,7 @@ function circle36() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2522,6 +2559,7 @@ function circle36() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2563,7 +2601,7 @@ function circle37() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2580,6 +2618,7 @@ function circle37() {
             }} else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2632,7 +2671,7 @@ function circle38() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2641,6 +2680,7 @@ function circle38() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2682,7 +2722,7 @@ function circle39() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2691,6 +2731,7 @@ function circle39() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2732,7 +2773,7 @@ function circle40() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2741,6 +2782,7 @@ function circle40() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2782,7 +2824,7 @@ function circle41() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2791,6 +2833,7 @@ function circle41() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2832,7 +2875,7 @@ function circle42() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2841,6 +2884,7 @@ function circle42() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2882,7 +2926,7 @@ function circle43() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2891,6 +2935,7 @@ function circle43() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2932,7 +2977,7 @@ function circle44() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2941,6 +2986,7 @@ function circle44() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -2982,7 +3028,7 @@ function circle45() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -2991,6 +3037,7 @@ function circle45() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3032,7 +3079,7 @@ function circle46() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3049,6 +3096,7 @@ function circle46() {
             }} else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3101,7 +3149,7 @@ function circle47() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3110,6 +3158,7 @@ function circle47() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3151,7 +3200,7 @@ function circle48() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3160,6 +3209,7 @@ function circle48() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3201,7 +3251,7 @@ function circle49() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3210,6 +3260,7 @@ function circle49() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3251,7 +3302,7 @@ function circle50() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3260,6 +3311,7 @@ function circle50() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3301,7 +3353,7 @@ function circle51() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3310,6 +3362,7 @@ function circle51() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3351,7 +3404,7 @@ function circle52() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3360,6 +3413,7 @@ function circle52() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3401,7 +3455,7 @@ function circle53() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3410,6 +3464,7 @@ function circle53() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3451,7 +3506,7 @@ function circle54() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3460,6 +3515,7 @@ function circle54() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3501,7 +3557,7 @@ function circle55() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3518,6 +3574,7 @@ function circle55() {
             }} else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3569,7 +3626,7 @@ function circle56() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3578,6 +3635,7 @@ function circle56() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3619,7 +3677,7 @@ function circle57() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3628,6 +3686,7 @@ function circle57() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3669,7 +3728,7 @@ function circle58() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3678,6 +3737,7 @@ function circle58() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3719,7 +3779,7 @@ function circle59() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3728,6 +3788,7 @@ function circle59() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3769,7 +3830,7 @@ function circle60() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3778,6 +3839,7 @@ function circle60() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3819,7 +3881,7 @@ function circle61() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3828,6 +3890,7 @@ function circle61() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3869,7 +3932,7 @@ function circle62() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3878,6 +3941,7 @@ function circle62() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3919,7 +3983,7 @@ function circle63() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3928,6 +3992,7 @@ function circle63() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -3969,7 +4034,7 @@ function circle64() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -3986,6 +4051,7 @@ function circle64() {
             }} else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4037,7 +4103,7 @@ function circle65() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4046,6 +4112,7 @@ function circle65() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4087,7 +4154,7 @@ function circle66() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4096,6 +4163,7 @@ function circle66() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4137,7 +4205,7 @@ function circle67() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4146,6 +4214,7 @@ function circle67() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4187,7 +4256,7 @@ function circle68() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4196,6 +4265,7 @@ function circle68() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4237,7 +4307,7 @@ function circle69() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4246,6 +4316,7 @@ function circle69() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4287,7 +4358,7 @@ function circle70() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4296,6 +4367,7 @@ function circle70() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4337,7 +4409,7 @@ function circle71() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4346,6 +4418,7 @@ function circle71() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4387,7 +4460,7 @@ function circle72() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4396,6 +4469,7 @@ function circle72() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4437,7 +4511,7 @@ function circle73() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4453,6 +4527,7 @@ function circle73() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4503,7 +4578,7 @@ function circle74() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4512,6 +4587,7 @@ function circle74() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4553,7 +4629,7 @@ function circle75() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4562,6 +4638,7 @@ function circle75() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4603,7 +4680,7 @@ function circle76() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4612,6 +4689,7 @@ function circle76() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4653,7 +4731,7 @@ function circle77() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4662,6 +4740,7 @@ function circle77() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4703,7 +4782,7 @@ function circle78() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4712,6 +4791,7 @@ function circle78() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4753,7 +4833,7 @@ function circle79() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4762,6 +4842,7 @@ function circle79() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4803,7 +4884,7 @@ function circle80() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4812,6 +4893,7 @@ function circle80() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
@@ -4853,7 +4935,7 @@ function circle81() {
             if (x % 2 == 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("circleFix")
                 circle.classList.add("clicked")
-                for (var i = 0, max = overlay.length; i < max; i++) {
+                ig+=1;for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
                 }
@@ -4862,6 +4944,7 @@ function circle81() {
             } else if (x % 2 != 0 && !circle.classList.contains("clicked")) {
                 circle.classList.add("clicked")
                 cross.classList.add("crossFix");
+                iy+=1;
                 for (var i = 0, max = overlay.length; i < max; i++) {
                     overlay[i].style.animation = "visible forwards 400ms ease running"
                     overlay[i].style.display = "flex";
