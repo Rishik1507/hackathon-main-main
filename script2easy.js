@@ -117,7 +117,7 @@ const addQues = ["./scieasy/1.png",
     "./scieasy/7.png",
     "./scieasy/8.png",
     "./scieasy/9.png"]
-const addAns = ["the speed increases","it slows down the object","potential energy","spring scale","it decreases","it decreases the effort needed to lift the load","thermal energy","volume","reduces the force needed to lift an object"]
+const addAns = [ "cell", "mars", "photosynthesis", "oxygen", "skin", "lion", "evaporation", "roots", "sun"]
 
 const subQues = ["../scieasy/10.png",
     "./scieasy/11.png",
@@ -128,7 +128,7 @@ const subQues = ["../scieasy/10.png",
     "./scieasy/16.png",
     "./scieasy/17.png",
     "./scieasy/18.png"]
-const subAns = ["frictional force", "chemical energy", "unbalanced force", "pressure increases", "light energy", "newton", "normal force", "thermometer", "inertia"]
+const subAns = ["camel", "digestion", "leaves", "condensation", "lioness", "photosynthesis", "stem", "precipitation", "eagle"]
 
 const mulQues = ["./scieasy/19.png",
 "./scieasy/20.png",
@@ -139,7 +139,7 @@ const mulQues = ["./scieasy/19.png",
 "./scieasy/25.png",
 "./scieasy/26.png",
 "./scieasy/27.png"]
-const mulAns = ["gravity","magnetic force","reduces the amount of force needed","newton","potential energy","normal force","acceleration","mass","kinetic energy"]
+const mulAns = ["respiration", "flowers", "freezing", "eagle", "excretion", "fruit", "melting", "whale", "evaporation"]
 
 const divQues = ["./scieasy/28.png",
 "./scieasy/29.png",
@@ -150,7 +150,7 @@ const divQues = ["./scieasy/28.png",
 "./scieasy/34.png",
 "./scieasy/35.png",
 "./scieasy/36.png"]
-const divAns = ["cell", "root", "photosynthesis", "heart", "to produce energy", "nucleus", "to absorb water and nutrients", "artery", "mitosis"]
+const divAns = ["flowers", "condensation", "whale", "condensation", "stem", "precipitation", "eagle", "respiration", "flowers"]
 
 const addMulQues = ["./scieasy/37.png",
 "./scieasy/38.png",
@@ -161,7 +161,7 @@ const addMulQues = ["./scieasy/37.png",
 "./scieasy/43.png",       
 "./scieasy/44.png",
 "./scieasy/45.png"]
-const addMulAns = ["to absorb light for photosynthesis", "circulatory system", "transpiration", "cardiac muscle", "to control what enters and exits the cell", "to absorb nutrients", "flower", "to store water and nutrients", "to synthesize proteins"]
+const addMulAns = ["freezing", "eagle", "excretion", "fruit", "melting", "whale", "evaporation", "flowers", "condensation"]
 
 const addSubQues = ["./scieasy/46.png",
 "./scieasy/47.png",
@@ -172,7 +172,7 @@ const addSubQues = ["./scieasy/46.png",
 "./scieasy/52.png",
 "./scieasy/53.png",
 "./scieasy/54.png"]
-const addSubAns = ["digestive system", "photosynthesis", "cell wall", "autotrophs", "tissue", "fermentation", "to carry out photosynthesis", "plasma", "red blood cells"]
+const addSubAns = ["whale", "condensation", "stem", "precipitation", "eagle", "respiration", "flowers", "condensation", "freezing"]
 
 const divMulQues = ["./scieasy/55.png",
 "./scieasy/56.png",
@@ -183,7 +183,7 @@ const divMulQues = ["./scieasy/55.png",
 "./scieasy/61.png",
 "./scieasy/62.png",
 "./scieasy/63.png"]
-const divMulAns = ["atom", "burning wood", "compound", "melting", "dull appearance", "solution", "chemical change", "evaporation", "oxygen"]
+const divMulAns = [ "eagle", "excretion", "fruit", "melting", "whale", "evaporation", "flowers", "condensation", "whale"]
     
 const divSubQues = ["./scieasy/64.png",
 "./scieasy/65.png",
@@ -194,7 +194,7 @@ const divSubQues = ["./scieasy/64.png",
 "./scieasy/70.png",
 "./scieasy/71.png",
 "./scieasy/72.png"]
-const divSubAns = ["volume", "condensation", "sulfur", "solubility", "covalent bond", "precipitate", "sand and salt", "freezing", "sour taste"]
+const divSubAns = ["condensation", "stem", "precipitation", "eagle", "respiration", "flowers", "freezing", "eagle", "excretion"]
     
 const allQues = ["./scieasy/73.png",
 "./scieasy/74.png",
@@ -205,7 +205,7 @@ const allQues = ["./scieasy/73.png",
 "./scieasy/79.png",
 "./scieasy/80.png",
 "./scieasy/81.png"]
-const allAns = ["catalyst", "hydrogen", "physical change", "sublimation", "boiling of water", "solute", "endothermic reaction", "solution", "reactivity with acid"]
+const allAns = ["fruit", "melting", "whale", "evaporation", "flowers", "condensation", "whale", "condensation", "stem"]
 
 //prompt-functioning
 // function addPrompt(){
