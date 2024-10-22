@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        #popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width:700px;
+            height:700px;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 15px;
+        }
+        h2 {
+            font-size:50px;
+        }
+        h5 {
+            font-size:30px;
+        }
+        #res, #res2 {
+            font-size:24px;
+        }
+        #myChart {
+            width: 100%; 
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="popup">
+            <center><h2><b>Your analysis.</b></h2>
+                <h5>Scroll Down for better Visibility!!</h5> 
+                <p id="res"></p> 
+                <p id="res2"></p>'
+                <p id="res3"></p>
+            </center>
+            
+
+                <!-- Add a canvas for the chart -->
+                <canvas id="myChart"></canvas>
+                <button onclick="showGraph()">Show Bar Graph</button>
+            </center>
+        </div>
+        <button onclick="showPopup()">Click Here</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ig = 9;
+        var iy = 6;
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("res").textContent = "Player 1 Score : " + ig;
+            document.getElementById("res2").textContent = "Player 2 Score : " + iy;
+            if(ig>iy){
+                document.getElementById("res3").textContent="Player 1 scored better than Player 2 and Player 2 needs improvement"
+            }
+            else{
+                document.getElementById("res3").textContent="Player 2 scored better than Player 1 and Player 1 needs improvement"
+            }
+        }
+
+        function showGraph() {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Player 1', 'Player 2'],
+                    datasets: [{
+                        label: 'Scores',
+                        data: [ig, iy],
+                        backgroundColor: ['#4CAF50', '#2196F3'],
+                        borderColor: ['#388E3C', '#1976D2'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+
+        }
+    </script>
+</body>
+</html>

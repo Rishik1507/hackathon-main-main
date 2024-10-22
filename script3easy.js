@@ -526,6 +526,43 @@ function hide() {
         chat.classList.remove("chatClick")
     }
 }
+function showPopup() {
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("res").textContent = "Player 1 Score : " + ig;
+    document.getElementById("res2").textContent = "Player 2 Score : " + iy;
+    if(ig>iy){
+        document.getElementById("res3").textContent="Player 1 scored better than Player 2 and Player 2 needs improvement"
+    }
+    else{
+        document.getElementById("res3").textContent="Player 2 scored better than Player 1 and Player 1 needs improvement"
+    }
+}
+
+function showGraph() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Player 1', 'Player 2'],
+            datasets: [{
+                label: 'Scores',
+                data: [ig, iy],
+                backgroundColor: ['green', 'yellow'],
+                borderColor: ['#388E3C', '#1976D2'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    
+
+}
 
 // win box ---
 
@@ -535,9 +572,11 @@ function win1() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle1.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle9.classList.contains("circleFix") || Circle3.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle7.classList.contains("circleFix") || Circle1.classList.contains("circleFix") && Circle4.classList.contains("circleFix") && Circle7.classList.contains("circleFix") || Circle2.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle8.classList.contains("circleFix") || Circle3.classList.contains("circleFix") && Circle6.classList.contains("circleFix") && Circle9.classList.contains("circleFix") || Circle1.classList.contains("circleFix") && Circle2.classList.contains("circleFix") && Circle3.classList.contains("circleFix") || Circle4.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle6.classList.contains("circleFix") || Circle7.classList.contains("circleFix") && Circle8.classList.contains("circleFix") && Circle9.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin") //green wins
+        showPopup()
     }
     if (cross1.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross9.classList.contains("crossFix") || cross3.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross7.classList.contains("crossFix") || cross1.classList.contains("crossFix") && cross4.classList.contains("crossFix") && cross7.classList.contains("crossFix") || cross2.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross8.classList.contains("crossFix") || cross3.classList.contains("crossFix") && cross6.classList.contains("crossFix") && cross9.classList.contains("crossFix") || cross1.classList.contains("crossFix") && cross2.classList.contains("crossFix") && cross3.classList.contains("crossFix") || cross4.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross6.classList.contains("crossFix") || cross7.classList.contains("crossFix") && cross8.classList.contains("crossFix") && cross9.classList.contains("crossFix")) {
         ansOverlay.classList.add("Ywin") //yellow wins
+        showPopup()
     }
     //circleFix -> green mark (player A)
     //crossfix -> yellow mark (player B)
@@ -548,9 +587,11 @@ function win2() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle10.classList.contains("circleFix") && Circle14.classList.contains("circleFix") && Circle18.classList.contains("circleFix") || Circle12.classList.contains("circleFix") && Circle14.classList.contains("circleFix") && Circle16.classList.contains("circleFix") || Circle10.classList.contains("circleFix") && Circle13.classList.contains("circleFix") && Circle16.classList.contains("circleFix") || Circle11.classList.contains("circleFix") && Circle14.classList.contains("circleFix") && Circle17.classList.contains("circleFix") || Circle12.classList.contains("circleFix") && Circle15.classList.contains("circleFix") && Circle18.classList.contains("circleFix") || Circle10.classList.contains("circleFix") && Circle11.classList.contains("circleFix") && Circle12.classList.contains("circleFix") || Circle13.classList.contains("circleFix") && Circle14.classList.contains("circleFix") && Circle15.classList.contains("circleFix") || Circle16.classList.contains("circleFix") && Circle17.classList.contains("circleFix") && Circle18.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
     }
     if (cross10.classList.contains("crossFix") && cross14.classList.contains("crossFix") && cross18.classList.contains("crossFix") || cross12.classList.contains("crossFix") && cross14.classList.contains("crossFix") && cross16.classList.contains("crossFix") || cross10.classList.contains("crossFix") && cross13.classList.contains("crossFix") && cross16.classList.contains("crossFix") || cross11.classList.contains("crossFix") && cross14.classList.contains("crossFix") && cross17.classList.contains("crossFix") || cross12.classList.contains("crossFix") && cross15.classList.contains("crossFix") && cross18.classList.contains("crossFix") || cross10.classList.contains("crossFix") && cross11.classList.contains("crossFix") && cross12.classList.contains("crossFix") || cross13.classList.contains("crossFix") && cross14.classList.contains("crossFix") && cross15.classList.contains("crossFix") || cross16.classList.contains("crossFix") && cross17.classList.contains("crossFix") && cross18.classList.contains("crossFix")) {
         ansOverlay.classList.add("Ywin")
+        showPopup()
     }
 }
 function win3() {
@@ -559,10 +600,12 @@ function win3() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle19.classList.contains("circleFix") && Circle23.classList.contains("circleFix") && Circle27.classList.contains("circleFix") || Circle21.classList.contains("circleFix") && Circle23.classList.contains("circleFix") && Circle25.classList.contains("circleFix") || Circle19.classList.contains("circleFix") && Circle22.classList.contains("circleFix") && Circle25.classList.contains("circleFix") || Circle20.classList.contains("circleFix") && Circle23.classList.contains("circleFix") && Circle26.classList.contains("circleFix") || Circle21.classList.contains("circleFix") && Circle24.classList.contains("circleFix") && Circle27.classList.contains("circleFix") || Circle19.classList.contains("circleFix") && Circle20.classList.contains("circleFix") && Circle21.classList.contains("circleFix") || Circle22.classList.contains("circleFix") && Circle23.classList.contains("circleFix") && Circle24.classList.contains("circleFix") || Circle25.classList.contains("circleFix") && Circle26.classList.contains("circleFix") && Circle27.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
 
     }    
     if (cross19.classList.contains("crossFix") && cross23.classList.contains("crossFix") && cross27.classList.contains("crossFix") || cross21.classList.contains("crossFix") && cross23.classList.contains("crossFix") && cross25.classList.contains("crossFix") || cross19.classList.contains("crossFix") && cross22.classList.contains("crossFix") && cross25.classList.contains("crossFix") || cross20.classList.contains("crossFix") && cross23.classList.contains("crossFix") && cross26.classList.contains("crossFix") || cross21.classList.contains("crossFix") && cross24.classList.contains("crossFix") && cross27.classList.contains("crossFix") || cross19.classList.contains("crossFix") && cross20.classList.contains("crossFix") && cross21.classList.contains("crossFix") || cross22.classList.contains("crossFix") && cross23.classList.contains("crossFix") && cross24.classList.contains("crossFix") || cross25.classList.contains("crossFix") && cross26.classList.contains("crossFix") && cross27.classList.contains("crossFix")) {
         ansOverlay.classList.add("Ywin")
+        showPopup()
 
     }
 }
@@ -571,10 +614,12 @@ function win4() {    circle = document.getElementById("circleOverlay4")
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle28.classList.contains("circleFix") && Circle32.classList.contains("circleFix") && Circle36.classList.contains("circleFix") || Circle30.classList.contains("circleFix") && Circle32.classList.contains("circleFix") && Circle34.classList.contains("circleFix") || Circle28.classList.contains("circleFix") && Circle31.classList.contains("circleFix") && Circle34.classList.contains("circleFix") || Circle29.classList.contains("circleFix") && Circle32.classList.contains("circleFix") && Circle35.classList.contains("circleFix") || Circle30.classList.contains("circleFix") && Circle33.classList.contains("circleFix") && Circle36.classList.contains("circleFix") || Circle28.classList.contains("circleFix") && Circle29.classList.contains("circleFix") && Circle30.classList.contains("circleFix") || Circle31.classList.contains("circleFix") && Circle32.classList.contains("circleFix") && Circle33.classList.contains("circleFix") || Circle34.classList.contains("circleFix") && Circle35.classList.contains("circleFix") && Circle36.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
 
     }
     if (cross28.classList.contains("crossFix") && cross32.classList.contains("crossFix") && cross36.classList.contains("crossFix") || cross30.classList.contains("crossFix") && cross32.classList.contains("crossFix") && cross34.classList.contains("crossFix") || cross28.classList.contains("crossFix") && cross31.classList.contains("crossFix") && cross34.classList.contains("crossFix") || cross29.classList.contains("crossFix") && cross32.classList.contains("crossFix") && cross35.classList.contains("crossFix") || cross30.classList.contains("crossFix") && cross33.classList.contains("crossFix") && cross36.classList.contains("crossFix") || cross28.classList.contains("crossFix") && cross29.classList.contains("crossFix") && cross30.classList.contains("crossFix") || cross31.classList.contains("crossFix") && cross32.classList.contains("crossFix") && cross33.classList.contains("crossFix") || cross34.classList.contains("crossFix") && cross35.classList.contains("crossFix") && cross36.classList.contains("crossFix")) {
         ansOverlay.classList.add("Ywin")
+        showPopup()
     }
 }
 function win5() {
@@ -583,9 +628,12 @@ function win5() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle37.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle40.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle38.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle44.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle42.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle38.classList.contains("circleFix") && Circle39.classList.contains("circleFix") || Circle40.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle42.classList.contains("circleFix") || Circle43.classList.contains("circleFix") && Circle44.classList.contains("circleFix") && Circle45.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
+        
     }
     if (cross37.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross40.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross38.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross44.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross42.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross38.classList.contains("crossFix") && cross39.classList.contains("crossFix") || cross40.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross42.classList.contains("crossFix") || cross43.classList.contains("crossFix") && cross44.classList.contains("crossFix") && cross45.classList.contains("crossFix")) {
         ansOverlay.classList.add("Ywin")
+        showPopup()
 
     }
 }
@@ -595,10 +643,12 @@ function win6() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle37.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle40.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle38.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle44.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle42.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle38.classList.contains("circleFix") && Circle39.classList.contains("circleFix") || Circle40.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle42.classList.contains("circleFix") || Circle43.classList.contains("circleFix") && Circle44.classList.contains("circleFix") && Circle45.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
 
     }
     if (cross37.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross40.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross38.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross44.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross42.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross38.classList.contains("crossFix") && cross39.classList.contains("crossFix") || cross40.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross42.classList.contains("crossFix") || cross43.classList.contains("crossFix") && cross44.classList.contains("crossFix") && cross45.classList.contains("crossFix")) {        overlay6.classList.add("displayIMP");
         ansOverlay.classList.add("Ywin")
+        showPopup()
 
     }
 }
@@ -608,10 +658,12 @@ function win7() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle55.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle63.classList.contains("circleFix") || Circle57.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle61.classList.contains("circleFix") || Circle55.classList.contains("circleFix") && Circle58.classList.contains("circleFix") && Circle61.classList.contains("circleFix") || Circle56.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle62.classList.contains("circleFix") || Circle57.classList.contains("circleFix") && Circle60.classList.contains("circleFix") && Circle63.classList.contains("circleFix") || Circle55.classList.contains("circleFix") && Circle56.classList.contains("circleFix") && Circle57.classList.contains("circleFix") || Circle58.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle60.classList.contains("circleFix") || Circle61.classList.contains("circleFix") && Circle62.classList.contains("circleFix") && Circle63.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
 
     }
     if (cross55.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross63.classList.contains("crossFix") || cross57.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross61.classList.contains("crossFix") || cross55.classList.contains("crossFix") && cross58.classList.contains("crossFix") && cross61.classList.contains("crossFix") || cross56.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross62.classList.contains("crossFix") || cross57.classList.contains("crossFix") && cross60.classList.contains("crossFix") && cross63.classList.contains("crossFix") || cross55.classList.contains("crossFix") && cross56.classList.contains("crossFix") && cross57.classList.contains("crossFix") || cross58.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross60.classList.contains("crossFix") || cross61.classList.contains("crossFix") && cross62.classList.contains("crossFix") && cross63.classList.contains("crossFix")) {        overlay7.classList.add("displayIMP");
         ansOverlay.classList.add("Ywin")
+        showPopup()
 
     }
 }
@@ -621,10 +673,12 @@ function win8() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle64.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle72classList.contains("circleFix") || Circle66.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle70.classList.contains("circleFix") || Circle64.classList.contains("circleFix") && Circle67.classList.contains("circleFix") && Circle70.classList.contains("circleFix") || Circle65.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle71.classList.contains("circleFix") || Circle66.classList.contains("circleFix") && Circle69.classList.contains("circleFix") && Circle72.classList.contains("circleFix") || Circle64.classList.contains("circleFix") && Circle65.classList.contains("circleFix") && Circle66.classList.contains("circleFix") || Circle67.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle69.classList.contains("circleFix") || Circle70.classList.contains("circleFix") && Circle71.classList.contains("circleFix") && Circle72.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
 
     }
     if (cross64.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross71.classList.contains("crossFix") || cross66.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross70.classList.contains("crossFix") || cross64.classList.contains("crossFix") && cross67.classList.contains("crossFix") && cross70.classList.contains("crossFix") || cross65.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross71.classList.contains("crossFix") || cross66.classList.contains("crossFix") && cross69.classList.contains("crossFix") && cross72.classList.contains("crossFix") || cross64.classList.contains("crossFix") && cross65.classList.contains("crossFix") && cross66.classList.contains("crossFix") || cross67.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross69.classList.contains("crossFix") || cross70.classList.contains("crossFix") && cross71.classList.contains("crossFix") && cross72.classList.contains("crossFix")) {        overlay8.classList.add("displayIMP");
         ansOverlay.classList.add("Ywin")
+        showPopup()
 
     }
 }
@@ -634,10 +688,12 @@ function win9() {
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle73.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle81.classList.contains("circleFix") || Circle75.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle79.classList.contains("circleFix") || Circle73.classList.contains("circleFix") && Circle76.classList.contains("circleFix") && Circle79.classList.contains("circleFix") || Circle74.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle80.classList.contains("circleFix") || Circle75.classList.contains("circleFix") && Circle78.classList.contains("circleFix") && Circle81.classList.contains("circleFix") || Circle73.classList.contains("circleFix") && Circle74.classList.contains("circleFix") && Circle75.classList.contains("circleFix") || Circle76.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle78.classList.contains("circleFix") || Circle79.classList.contains("circleFix") && Circle80.classList.contains("circleFix") && Circle81.classList.contains("circleFix")) {
         ansOverlay.classList.add("Gwin")
+        showPopup()
 
     }
     if (cross73.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross81.classList.contains("crossFix") || cross75.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross79.classList.contains("crossFix") || cross73.classList.contains("crossFix") && cross76.classList.contains("crossFix") && cross79.classList.contains("crossFix") || cross74.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross80.classList.contains("crossFix") || cross75.classList.contains("crossFix") && cross78.classList.contains("crossFix") && cross81.classList.contains("crossFix") || cross73.classList.contains("crossFix") && cross74.classList.contains("crossFix") && cross75.classList.contains("crossFix") || cross76.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross78.classList.contains("crossFix") || cross79.classList.contains("crossFix") && cross80.classList.contains("crossFix") && cross81.classList.contains("crossFix")) {        overlay9.classList.add("displayIMP");
         ansOverlay.classList.add("Ywin")
+        showPopup()
 
     }
 }
