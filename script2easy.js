@@ -172,7 +172,7 @@ const addSubQues = ["./scieasy/46.png",
 "./scieasy/52.png",
 "./scieasy/53.png",
 "./scieasy/54.png"]
-const addSubAns = ["whale", "condensation", "stem", "precipitation", "eagle", "respiration", "flowers", "condensation", "freezing"]
+const addSubAns = ["whale", "condensation", "stem", "precipitation", "eagle", "respiration", "flowers", "freezing", "eagle"]
 
 const divMulQues = ["./scieasy/55.png",
 "./scieasy/56.png",
@@ -183,7 +183,7 @@ const divMulQues = ["./scieasy/55.png",
 "./scieasy/61.png",
 "./scieasy/62.png",
 "./scieasy/63.png"]
-const divMulAns = [ "eagle", "excretion", "fruit", "melting", "whale", "evaporation", "flowers", "condensation", "whale"]
+const divMulAns = [ "excretion", "fruit", "melting", "whale", "evaporation", "flowers", "condensation", "whale","condensation"]
     
 const divSubQues = ["./scieasy/64.png",
 "./scieasy/65.png",
@@ -194,7 +194,7 @@ const divSubQues = ["./scieasy/64.png",
 "./scieasy/70.png",
 "./scieasy/71.png",
 "./scieasy/72.png"]
-const divSubAns = ["condensation", "stem", "precipitation", "eagle", "respiration", "flowers", "freezing", "eagle", "excretion"]
+const divSubAns = [ "stem", "precipitation", "eagle", "respiration", "flowers", "condensation ","freeezing", "eagle", "excretion"]
     
 const allQues = ["./scieasy/73.png",
 "./scieasy/74.png",
