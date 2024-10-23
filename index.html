@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slow Learner Identifier</title>
-    
-    <style>
+   <style>
         * {
     margin: 0;
     padding: 0;
@@ -163,7 +154,32 @@ input[type="text"]:focus {
     margin-top: 1.5rem;
     font-size: 1.2rem;
    color:green;
+}#pop {
+            display: none; /* Hidden by default */
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width:700px;
+            height:700px;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 15px;}
+h2 {
+            font-size:50px;
 }
+h5 {
+            font-size:30px;
+        }
+#res{
+
+color:green;
+font-size: 30px;
+
+}
+
 
     </style>
 </head>
@@ -184,53 +200,66 @@ input[type="text"]:focus {
    Para 1. Many common animals have distinct colors that serve various purposes. Dogs can have a brown coat, useful for blending into natural environments. Cats are often seen in black, providing stealth and camouflage, especially at night. Cows are frequently spotted with white, a prominent feature in breeds like Holsteins. Horses commonly have a chestnut color, giving them a rich, reddish-brown appearance. Pigeons are usually grey, helping them blend into urban landscapes</p>
             <div class="question">
                 <label for="q1">Q1. What is the colour of Pigeons as described in the above passage?</label>
-                <input type="text" id="q1" required>
+                <input type="text" id="q1" >
             </div>
             <div class="question">
                 <label for="q2">Q2. What is the colour of the coats of Dogs as described in the above passage?</label>
-                <input type="text" id="q2" required>
+                <input type="text" id="q2" >
             </div>
             <div class="question">
                 <label for="q3">Q3. How are cats often seen as?</label>
-                <input type="text" id="q3" required>
+                <input type="text" id="q3" >
                 <p>Read the following passage and answer the given question 4</p><br>
                 <p>Para 2. John went to the store to buy some fruits. He bought apples, bananas, and oranges. On his way home, he gave one apple to a friend and ate one banana. When he reached home, he had two oranges left.</p>
                     <div class="question">
                         <label for="q4">Q4. How many apples did John buy if he gave one to his friend and had none left when he reached home?</label>
-                        <input type="text" id="q4" required>
+                        <input type="text" id="q4" >
                     </div>
                     <div class="question">
                         <p>Read the following passage and answer the given question 5</p><br>
                         <p>Para 3.  Tom loves reading books about space. Every night before bed, he reads a chapter from his favorite space book. He is fascinated by the planets, stars, and galaxies. His favorite planet is Mars because it’s red and might have had water a long time ago. Tom dreams of becoming an astronaut and visiting Mars one day.</p>
                         <label for="q5">Q5. What is Tom’s favorite planet?</label>
-                        <input type="text" id="q5" required>
+                        <input type="text" id="q5" >
                     <div class="question">
                         <label for="q6">Q6. "The sun is the closest star to Earth." Is this statement a fact or an opinion?</label>
-                        <input type="text" id="q6" required>
+                        <input type="text" id="q6" >
                     </div>
                     <div class="question">
                         <label for="q7">Q7. Look at the series: 2, 4, 6, 8, ___. What number should come next?</label>
-                        <input type="text" id="q7" required>
+                        <input type="text" id="q7" >
                     </div>
                     <div class="question">
                         <label for="q8">Q8. Finger is to hand as toe is to ___.
         
                         </label>
-                        <input type="text" id="q8" required>
+                        <input type="text" id="q8" >
                     </div>
                     <div class="question">
                         <label for="q9">Q9. All birds have wings. A sparrow is a bird. Does a sparrow have wings?</label>
-                        <input type="text" id="q9" required>
+                        <input type="text" id="q9" >
                  
 
             
          
                 <center><button type="button" class="btn" onclick="res()">Submit</button></center>
         </form>
+        <div id="pop">
+            <center><h2><b>Your Score!!</b></h2>
+                 
+                <p id="res"></p> 
+                <p id="res2"></p> 
+                <button class="btn" onclick="next()">Next</button>
+               
+            </center>
+            
 
+                
+          
+        </div>
     </div>
     <div id="result"></div>
     <script>
+    var score=0;
    window.onload = function() {
             document.getElementById("popup").style.display = "block";
         };
@@ -243,8 +272,12 @@ input[type="text"]:focus {
                 popup.style.display = "none";
             }
         };
+        
  function res() {
     
+    
+
+           
             const answers = {
                 q1: "grey",
                 q2: "brown",
@@ -257,7 +290,7 @@ input[type="text"]:focus {
                 q9: "yes"
             };
 
-            let score = 0;
+            
             const totalQuestions = 9;
 
             for (let i = 1; i <= totalQuestions; i++) {
@@ -267,20 +300,40 @@ input[type="text"]:focus {
                 }
             }
 
-
+            document.getElementById("pop").style.display = "block";
+            document.getElementById("res").textContent = "You scored " + score;
           if (score<=4){
-            window.location.href="index copy.html"
+
+            document.getElementById("res2").innerHTML="You scored equal or less than 4.So now further you will get some easy questions .Click on the Next Button to get our games.. "
           }
           else{
-            window.location.href="i.html"
+
+            
+            document.getElementById("res2").textContent="You scored more than 4.So now further you will get difficult questions .Click on the Next Button to get our games.."
           }
-          return false;
+          
         }
+        
+function next(){
+    
+
+
+    if(score<=4){
+
+
+        console.log("Redirecting to easy")
+        window.open("index copy.html");
+    }
+    else{
+        console.log("Redirecting to difficult")
+        window.open("i.html")
+        }
+    return false 
+    }
+
     </script>
     
-    </script>
 
 </body>
 </html>
-</body>
-</html>
+
