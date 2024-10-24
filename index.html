@@ -6,193 +6,189 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <title>Remedial Learning</title>
     <style>
         body {
             font-family: 'Oswald', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #000;
+            color: #e0e0e0;
             font-size: 18px;
-            background: radial-gradient(circle, #1c1c1c, #070046);
-            color: #f5f5f5;
-            transition: background-color 0.5s;
+            cursor: url('minimal_cursor.png'), auto; /* Custom cursor */
         }
-
+        
         header {
-            background: linear-gradient(135deg, #070046, #ff7e5f);
-            color: white;
+            background: #111;
             text-align: center;
-            padding: 20px 0;
-            height: 14vh;
-            position: relative;
-            overflow: hidden;
+            padding: 40px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
-
+        
         h1 {
+            font-family: 'Anton', sans-serif;
             margin: 0;
-            font-size: 4rem;
-            letter-spacing: 2px;
-            color: #ff7e5f;
-            animation: fadeIn 2s;
+            font-size: 3.5rem;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
         }
-
+        
+        h1:hover {
+            color: #ff5757;
+        }
+        
         .slogan {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-top: 10px;
             font-style: italic;
-            transition: color 0.5s;
+            color: #888;
+            transition: color 0.3s ease;
         }
-
-        header:hover .slogan {
-            color: #feb47b;
+        
+        .slogan:hover {
+            color: #ff5757;
         }
-
+        
         .content {
-            padding: 40px;
+            padding: 80px 0;
             text-align: center;
-            background: rgba(230, 220, 165, 0.1);
+            background: #181818;
             border-radius: 20px;
             width: 90%;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto;
-            color: #ffd54f;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
         }
-
-        .content:hover {
-            transform: scale(1.05);
-        }
-
+        
         .content h2 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #ffb74d;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-weight: 500;
             color: #f5f5f5;
+            transition: color 0.3s ease;
         }
-
-        .signup h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ff7e5f;
+        
+        .content h2:hover {
+            color: #ff5757;
         }
-
+        
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+        
+        .content p:hover {
+            color: #ff5757;
+        }
+        
+        .signup {
+            text-align: center; /* Center the button container */
+        }
+        
         .signup a {
             display: inline-block;
-            background-color: #ff7e5f;
-            padding: 10px 20px;
-            border-radius: 8px;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .signup a:hover {
-            background-color: #feb47b;
-        }
-
-        .thumbnail {
             margin-top: 40px;
-            cursor: pointer;
-            transition: transform 0.3s;
+            padding: 14px 40px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-
-        .thumbnail:hover {
-            transform: scale(1.05);
+        
+        .signup a:hover {
+            background-color: #ff5757;
+            box-shadow: 0 0 20px #ff5757, 0 0 30px #ff5757, 0 0 40px #ff5757;
+            transform: scale(1.1);
         }
-
+        
+        .thumbnail {
+            margin: 60px auto;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.03);
+        }
+        
         .thumbnail img {
             width: 100%;
-            max-width: 300px;
-            height: auto;
-            border: 3px solid #f5f5f5;
-            border-radius: 12px;
+            max-width: 400px;
+            border-radius: 15px;
+            border: 3px solid #333;
             transition: border-color 0.3s;
         }
-
+        
         .thumbnail img:hover {
-            border-color: #ff7e5f;
+            border-color: #555;
         }
-
+        
         footer {
-            background-color: #070046;
-            color: #f5f5f5;
-            padding: 20px 0;
+            padding: 60px 0;
+            background-color: #111;
             text-align: center;
+            color: #888;
         }
-
+        
         footer h2 {
-            margin: 0;
             font-size: 1.8rem;
-            color: #ff7e5f;
+            color: #e0e0e0;
         }
-
+        
         footer p {
             font-size: 1rem;
-            color: #a9a9a9;
+            color: #888;
         }
-
+        
         footer a {
-            color: #f5f5f5;
-            margin: 0 10px;
+            color: #e0e0e0;
+            margin: 0 15px;
             text-decoration: none;
+            font-size: 1.2rem;
         }
-
+        
         footer a:hover {
-            color: #ff7e5f;
+            color: #ff5757;
         }
-
+        
         footer img {
-            width: 44px;
-            transition: transform 0.3s, filter 0.3s;
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
         }
-
+        
         footer img:hover {
-            transform: scale(1.2);
-            filter: brightness(1.5);
+            transform: scale(1.1);
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        
+        * {
+            transition: all 0.3s ease;
         }
-
-        @media (max-width: 600px) {
+        
+        @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
             }
-
+        
             .content h2 {
                 font-size: 2rem;
             }
-
-            .signup  {
-                font-size: 2rem;
-                text-align:center;
-            }
-
-            #image {
-                height: 100px;
-                width: 100px;
-            }
-
-            p {
-                font-size: 12px;
+        
+            .content p {
+                font-size: 1rem;
             }
         }
+        
+        
     </style>
 </head>
 <body>
@@ -207,48 +203,32 @@
     <div class="content">
         <h2>Learn Bit by Bit</h2>
         <p>
-            We believe in the power of individualized learning techniques to help slow learners. Our platform offers 
-            interactive learning methods designed to assist those who need extra guidance. From personalized lessons 
-            to engaging activities, we focus on making learning fun and effective for everyone.
+            We believe in the power of individualized learning techniques to help slow learners. Our platform offers interactive learning methods designed to assist those who need extra guidance. From personalized lessons to engaging activities, we focus on making learning fun and effective for everyone.
         </p>
         <p>
-            Whether it's through the use of visual aids, hands-on activities, or digital tools, we ensure that every 
-            student progresses at their own pace. Join us as we bridge the gap for slow learners with innovative and 
-            supportive teaching strategies.
+            Join us as we bridge the gap for slow learners with innovative and supportive teaching strategies.
         </p>
     </div>
 
-    <!-- Sign Up Section -->
+    <!-- Button to Form -->
     <div class="signup">
-        
-       
+        <a href="form.html">Get Started</a>
     </div>
 
     <!-- Thumbnail -->
     <div class="thumbnail" onclick="window.location.href='form.html'">
-        <h2>Click here to get started with our form!!</h2>
-        <img src="Group 27 (1).png" alt="Sign Up Thumbnail">
+        <img src="Black White Yellow Simple Initial Name Logo.png" alt="Sign Up Thumbnail">
     </div>
 
     <!-- Footer -->
     <footer>
-        <div>
-            <h2>Bit-Driven</h2>
-            <p>Empowering Every Learner's Journey</p>
-        </div>
-
-        <!-- Social Media Links -->
-        <div>
-            <p>Follow Us</p>
-            <a href="https://www.instagram.com/bitdriven/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-        </div>
+        <h2>Bit-Driven</h2>
+        <p>Empowering Every Learner's Journey</p>
+        <p>Follow Us:</p>
+        <a href="https://www.instagram.com/bitdriven/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
         <p>Contact Us: bitdrivenn@gmail.com</p>
         <h3>Our team: Rishik Goyal, Parin Khurana, Ishaan Handa, Mihika Chawla, Abhay Mangla</h3>
-
-        <!-- Copyright -->
-        <p>© 2024 Bit-Driven. All Rights Reserved.</p>
+        <p>&copy; 2024 Bit-Driven. All Rights Reserved.</p>
     </footer>
 
 </body>
