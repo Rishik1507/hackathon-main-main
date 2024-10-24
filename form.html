@@ -250,6 +250,7 @@ font-size: 30px;
                 <p id="res"></p> 
                 <p id="res2"></p> 
                 <button class="btn" onclick="next()">Next</button>
+                <button class="btn" onclick="cancel()">Cancel</button>
                
             </center>
             
@@ -260,6 +261,7 @@ font-size: 30px;
     </div>
     <div id="result"></div>
     <script>
+        var qleft=0;
     var score=0;
    window.onload = function() {
             document.getElementById("popup").style.display = "block";
@@ -296,22 +298,52 @@ font-size: 30px;
 
             for (let i = 1; i <= totalQuestions; i++) {
                 let userAnswer = document.getElementById(`q${i}`).value.toLowerCase().trim();
+                if (userAnswer===""){
+                    qleft=1;
+                }
+                
                 if (userAnswer === answers[`q${i}`]) {
                     score++;
                 }
             }
 
             document.getElementById("pop").style.display = "block";
-            document.getElementById("res").textContent = "You scored " + score;
-          if (score<=4){
+            document.getElementById("res").textContent = "Your current score: " + score;
+        if(qleft===1){
+            if (score<=4){
 
-            document.getElementById("res2").innerHTML="You scored equal or less than 4. No worries! Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
-          }
-          else{
 
-            
-            document.getElementById("res2").textContent=" Hurray!! You scored more than 4. Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
-          }
+
+                document.getElementById("res2").innerHTML="You currently scored equal or less than 4.<b> You have some incomplete questions!! Are you sure you want to submit?? </b> If yes No worries! Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
+}
+            else{
+
+
+
+
+
+                document.getElementById("res2").textContent=" Hurray!! You currently scored more than 4.<b>You have some incomplete questions!! Are you sure you want to submit??</b> If yes Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
+}
+
+
+        }
+        else{
+            if (score<=4){
+
+
+
+document.getElementById("res2").innerHTML="You  scored equal or less than 4. Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
+}
+else{
+
+
+
+
+
+document.getElementById("res2").textContent=" Hurray!! You currently scored more than 4. Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
+}
+
+        }
           
         }
         
@@ -331,6 +363,12 @@ function next(){
         }
     return false;
     }
+function cancel(){
+
+    document.getElementById("pop").style.display = "none";
+
+
+}
 
     </script>
     
