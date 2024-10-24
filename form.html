@@ -96,7 +96,6 @@ h1 {
     color: #333;
 }
 p{
-
     font-size:19px;
     margin-top:20px;
     margin-bottom:50px;
@@ -125,8 +124,6 @@ input[type="text"] {
     margin-bottom:20px;
 }
 
-
-
 input[type="text"]:focus {
     outline: none;
     border-color: #5e72e4;
@@ -154,32 +151,41 @@ input[type="text"]:focus {
     margin-top: 1.5rem;
     font-size: 1.2rem;
    color:green;
-}#pop {
-            display: none; /* Hidden by default */
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            width:700px;
-            height:700px;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: white;
-            border: 1px solid black;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            border-radius: 15px;}
+}
+
+#pop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width:700px;
+    height:700px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
+}
+
 h2 {
-            font-size:50px;
+    font-size:50px;
 }
+
 h5 {
-            font-size:30px;
-        }
-#res{
-
-color:green;
-font-size: 30px;
-
+    font-size:30px;
 }
 
+#res{
+    color:green;
+    font-size: 30px;
+}
+
+#timeDisplay {
+    color: #333;
+    font-size: 30px;
+    margin: 20px 0;
+}
 
     </style>
 </head>
@@ -218,8 +224,8 @@ font-size: 30px;
                     </div>
                     <div class="question">
                         <p>Read the following passage and answer the given question 5</p><br>
-                        <p>Para 3.  Tom loves reading books about space. Every night before bed, he reads a chapter from his favorite space book. He is fascinated by the planets, stars, and galaxies. His favorite planet is Mars because it’s red and might have had water a long time ago. Tom dreams of becoming an astronaut and visiting Mars one day.</p>
-                        <label for="q5">Q5. What is Tom’s favorite planet?</label>
+                        <p>Para 3.  Tom loves reading books about space. Every night before bed, he reads a chapter from his favorite space book. He is fascinated by the planets, stars, and galaxies. His favorite planet is Mars because it's red and might have had water a long time ago. Tom dreams of becoming an astronaut and visiting Mars one day.</p>
+                        <label for="q5">Q5. What is Tom's favorite planet?</label>
                         <input type="text" id="q5" >
                     <div class="question">
                         <label for="q6">Q6. "The sun is the closest star to Earth." Is this statement a fact or an opinion?</label>
@@ -230,57 +236,74 @@ font-size: 30px;
                         <input type="text" id="q7" >
                     </div>
                     <div class="question">
-                        <label for="q8">Q8. Finger is to hand as toe is to ___.
-        
-                        </label>
+                        <label for="q8">Q8. Finger is to hand as toe is to ___.</label>
                         <input type="text" id="q8" >
                     </div>
                     <div class="question">
                         <label for="q9">Q9. All birds have wings. A sparrow is a bird. Does a sparrow have wings?</label>
                         <input type="text" id="q9" >
-                 
-
-            
-         
+                    </div>
+                </div>
                 <center><button type="button" class="btn" onclick="res()">Submit</button></center>
         </form>
         <div id="pop">
-            <center><h2><b>Your Score!!</b></h2>
-                 
+            <center>
+                <h2><b>Your Score!!</b></h2>
+                <div id="timeDisplay"></div>
                 <p id="res"></p> 
                 <p id="res2"></p> 
                 <button class="btn" onclick="next()">Next</button>
                 <button class="btn" onclick="cancel()">Cancel</button>
-               
             </center>
-            
-
-                
-          
         </div>
     </div>
-    <div id="result"></div>
+
     <script>
-        var qleft=0;
-    var score=0;
-   window.onload = function() {
+        var qleft = 0;
+        var score = 0;
+        var startMinutes = new Date().getMinutes();
+        var startSeconds = new Date().getSeconds();
+
+        window.onload = function() {
             document.getElementById("popup").style.display = "block";
+            startMinutes = new Date().getMinutes();
+            startSeconds = new Date().getSeconds();
         };
+
         document.getElementById("close").onclick = function() {
             document.getElementById("popup").style.display = "none";
         };
+
         window.onclick = function(event) {
             const popup = document.getElementById("popup");
             if (event.target === popup) {
                 popup.style.display = "none";
             }
         };
-        
- function res() {
-    
-    
 
-           
+        function calculateTimeTaken() {
+            const currentMinutes = new Date().getMinutes();
+            const currentSeconds = new Date().getSeconds();
+            
+            let minutesDiff = currentMinutes - startMinutes;
+            let secondsDiff = currentSeconds - startSeconds;
+            
+            if (secondsDiff < 0) {
+                minutesDiff--;
+                secondsDiff += 60;
+            }
+            
+            return {
+                minutes: minutesDiff,
+                seconds: secondsDiff
+            };
+        }
+        
+        function res() {
+            const timeTaken = calculateTimeTaken();
+            const timeString = `Time Taken: ${timeTaken.minutes} minutes and ${timeTaken.seconds} seconds`;
+            document.getElementById("timeDisplay").textContent = timeString;
+            
             const answers = {
                 q1: "grey",
                 q2: "brown",
@@ -293,15 +316,13 @@ font-size: 30px;
                 q9: "yes"
             };
 
-            
             const totalQuestions = 9;
 
             for (let i = 1; i <= totalQuestions; i++) {
                 let userAnswer = document.getElementById(`q${i}`).value.toLowerCase().trim();
-                if (userAnswer===""){
-                    qleft+=1;
+                if (userAnswer === "") {
+                    qleft += 1;
                 }
-                
                 if (userAnswer === answers[`q${i}`]) {
                     score++;
                 }
@@ -309,72 +330,36 @@ font-size: 30px;
 
             document.getElementById("pop").style.display = "block";
             document.getElementById("res").textContent = "Your current score: " + score;
-        if(qleft>=0){
-            if (score<=4){
-
-
-
-                document.getElementById("res2").innerHTML="You currently scored equal or less than 4.<b> You have left</b> "+ qleft+"<b> questions. Are you sure you want to submit?? </b> If yes No worries! Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
-}
-            else{
-
-
-
-
-
-                document.getElementById("res2").textContent=" Hurray!! You currently scored more than 4 but <b>You have left </b>"+qleft>+ " <b>questions.Are you sure you want to submit??</b> If yes Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
-}
-
-
+            
+            if(qleft > 0) {
+                if (score <= 4 || timeTaken.seconds>30) {
+                    document.getElementById("res2").innerHTML = `You currently scored equal or less than 4 or you took a lot of time.and <b>You have left ${qleft} questions. Are you sure you want to submit??</b> If yes No worries! Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games..`;
+                } else {
+                    document.getElementById("res2").innerHTML = `Hurray!! You currently scored more than 4 but <b>You have left ${qleft} questions. Are you sure you want to submit??</b> If yes Now you will get hard questions to test your knowledge. Click on the Next Button to get our games..`;
+                }
+            } else {
+                if (score <= 4|| timeTaken.seconds>30) {
+                    document.getElementById("res2").innerHTML = "You scored equal or less than 4 or you took alot of time. Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games..";
+                } else {
+                    document.getElementById("res2").textContent = "Hurray!! You currently scored more than 4. Now you will get hard questions to test your knowledge. Click on the Next Button to get our games..";
+                }
+            }
         }
-        else{
-            if (score<=4){
 
-
-
-document.getElementById("res2").innerHTML="You  scored equal or less than 4. Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
-}
-else{
-
-
-
-
-
-document.getElementById("res2").textContent=" Hurray!! You currently scored more than 4. Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
-}
-
+        function next() {
+            if(score <= 4) {
+                console.log("Redirecting to easy");
+                window.open("index copy.html");
+            } else {
+                console.log("Redirecting to difficult");
+                window.open("i.html");
+            }
+            return false;
         }
-          
+
+        function cancel() {
+            document.getElementById("pop").style.display = "none";
         }
-        
-function next(){
-    
-
-
-    if(score<=4){
-
-
-        console.log("Redirecting to easy")
-        window.open("index copy.html");
-    }
-    else{
-        console.log("Redirecting to difficult")
-        window.open("i.html")
-        }
-    return false;
-    }
-function cancel(){
-
-    document.getElementById("pop").style.display = "none";
-
-
-}
-
     </script>
-    
-
 </body>
 </html>
-
-
-
