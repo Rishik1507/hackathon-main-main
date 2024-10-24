@@ -15,88 +15,95 @@
             padding: 0;
             box-sizing: border-box;
             font-size: 18px;
-            background-color: black;
-            color: white;
+            background: radial-gradient(circle, #1c1c1c, #070046);
+            color: #f5f5f5;
             transition: background-color 0.5s;
-            align-items: center;
         }
 
         header {
-            background-color: #070046;
-            color: orange;
+            background: linear-gradient(135deg, #070046, #ff7e5f);
+            color: white;
             text-align: center;
             padding: 20px 0;
-            height: 10vh;
+            height: 14vh;
             position: relative;
             overflow: hidden;
-            height:14vh;
         }
 
         h1 {
             margin: 0;
-            font-size: 3rem;
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 4rem;
+            letter-spacing: 2px;
+            color: #ff7e5f;
             animation: fadeIn 2s;
         }
 
         .slogan {
             font-size: 1.5rem;
-            color: white;
             margin-top: 10px;
             font-style: italic;
             transition: color 0.5s;
         }
 
         header:hover .slogan {
-            color: orange;
+            color: #feb47b;
         }
 
         .content {
             padding: 40px;
             text-align: center;
-            border-radius: 15px;
-            background-color: #e6dca5;
+            background: rgba(230, 220, 165, 0.1);
+            border-radius: 20px;
             width: 90%;
             max-width: 800px;
-            margin: 20px auto;
-            color: rgb(155, 104, 10);
-            text-align: left;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
+            margin: 40px auto;
+            color: #ffd54f;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
         }
 
         .content:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
         }
 
         .content h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
+            color: #ffb74d;
         }
 
         p {
             font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .signup {
-            margin-top: 50px;
-            text-align: center;
+            line-height: 1.8;
+            color: #f5f5f5;
         }
 
         .signup h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #ff7e5f;
+        }
+
+        .signup a {
+            display: inline-block;
+            background-color: #ff7e5f;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .signup a:hover {
+            background-color: #feb47b;
         }
 
         .thumbnail {
-      
+            margin-top: 40px;
             cursor: pointer;
             transition: transform 0.3s;
-            margin-left:40%
+            text-align: center;
         }
 
         .thumbnail:hover {
@@ -107,29 +114,51 @@
             width: 100%;
             max-width: 300px;
             height: auto;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            border: 3px solid #f5f5f5;
+            border-radius: 12px;
             transition: border-color 0.3s;
-            
-            
         }
 
         .thumbnail img:hover {
-            border-color: #4CAF50;
+            border-color: #ff7e5f;
         }
 
         footer {
-            background-color: #1c1c1c;
+            background-color: #070046;
+            color: #f5f5f5;
+            padding: 20px 0;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            color: white;
+        }
+
+        footer h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #ff7e5f;
         }
 
         footer p {
-            margin: 0;
+            font-size: 1rem;
+            color: #a9a9a9;
+        }
+
+        footer a {
+            color: #f5f5f5;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff7e5f;
+        }
+
+        footer img {
+            width: 44px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        footer img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.5);
         }
 
         @keyframes fadeIn {
@@ -150,19 +179,18 @@
                 font-size: 2rem;
             }
 
-            .signup h2 {
+            .signup  {
                 font-size: 2rem;
+                text-align:center;
             }
-            #image{
 
-                height:100px;
-                width:100px;
+            #image {
+                height: 100px;
+                width: 100px;
             }
-            #hello{
-                margin-left:1000px;
-            }
-            p{
-                font-size:10px;
+
+            p {
+                font-size: 12px;
             }
         }
     </style>
@@ -177,7 +205,7 @@
 
     <!-- Main Content -->
     <div class="content">
-        <h2>Learn every Bit by Bit..</h2>
+        <h2>Learn Bit by Bit</h2>
         <p>
             We believe in the power of individualized learning techniques to help slow learners. Our platform offers 
             interactive learning methods designed to assist those who need extra guidance. From personalized lessons 
@@ -192,49 +220,35 @@
 
     <!-- Sign Up Section -->
     <div class="signup">
-        <h2>Click here to get started with our form!!</h2>
+        
+       
     </div>
 
     <!-- Thumbnail -->
     <div class="thumbnail" onclick="window.location.href='form.html'">
+        <h2>Click here to get started with our form!!</h2>
         <img src="Group 27 (1).png" alt="Sign Up Thumbnail">
     </div>
 
     <!-- Footer -->
-    <footer style="background-color: #1a1a1a; color: #f5f5f5; padding: 20px 0; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                <!-- Logo or Brand Name -->
-                <div style="flex-basis: 40%; text-align: left;" id="hello">
-                   <h2 style="margin: 0; font-size: 24px;">Bit-Driven</h2>
-                    <p style="margin: 5px 0; font-size: 14px; color: #a9a9a9;">Empowering Every Learner's Journey</p>
-                </div>
-    
-                <!-- Social Media Links -->
-                <div style="flex-basis: 40%; text-align: right;">
-                    <p style="margin: 0; font-size: 14px;">Follow Us</p>
-                    <div style="margin-top: 10px;">
-                        
-                        <a href="https://www.instagram.com/bitdriven/" target="_blank" style="text-decoration: none; margin: 0 10px; color: #f5f5f5;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 44px;" id="image">
-                        </a>
-
-                    </div>
-                    <p>Contact Us: bitdrivenn@gmail.com</p>
-                    <h3>Our team: Rishik Goyal, Parin Khurana, Ishaan Handa, Mihika Chawla, Abhay Mangla
-
-                    </h3>
-                </div>
-            </div>
-    
-            <!-- Footer Links -->
-            
-    
-            <!-- Copyright -->
-            <div style="margin-top: 20px; font-size: 12px; color: #a9a9a9;">
-                © 2024 Bit-Driven. All Rights Reserved.
-            </div>
+    <footer>
+        <div>
+            <h2>Bit-Driven</h2>
+            <p>Empowering Every Learner's Journey</p>
         </div>
+
+        <!-- Social Media Links -->
+        <div>
+            <p>Follow Us</p>
+            <a href="https://www.instagram.com/bitdriven/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+        <p>Contact Us: bitdrivenn@gmail.com</p>
+        <h3>Our team: Rishik Goyal, Parin Khurana, Ishaan Handa, Mihika Chawla, Abhay Mangla</h3>
+
+        <!-- Copyright -->
+        <p>© 2024 Bit-Driven. All Rights Reserved.</p>
     </footer>
 
 </body>
