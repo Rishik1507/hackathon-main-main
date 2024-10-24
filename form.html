@@ -299,7 +299,7 @@ font-size: 30px;
             for (let i = 1; i <= totalQuestions; i++) {
                 let userAnswer = document.getElementById(`q${i}`).value.toLowerCase().trim();
                 if (userAnswer===""){
-                    qleft=1;
+                    qleft+=1;
                 }
                 
                 if (userAnswer === answers[`q${i}`]) {
@@ -309,12 +309,12 @@ font-size: 30px;
 
             document.getElementById("pop").style.display = "block";
             document.getElementById("res").textContent = "Your current score: " + score;
-        if(qleft===1){
+        if(qleft>=0){
             if (score<=4){
 
 
 
-                document.getElementById("res2").innerHTML="You currently scored equal or less than 4.<b> You have some incomplete questions!! Are you sure you want to submit?? </b> If yes No worries! Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
+                document.getElementById("res2").innerHTML="You currently scored equal or less than 4.<b> You have left</b> "+ qleft+"<b> questions. Are you sure you want to submit?? </b> If yes No worries! Now you will get easy questions which will help you enhance your knowledge. Click on the Next button to get our games.. "
 }
             else{
 
@@ -322,7 +322,7 @@ font-size: 30px;
 
 
 
-                document.getElementById("res2").textContent=" Hurray!! You currently scored more than 4.<b>You have some incomplete questions!! Are you sure you want to submit??</b> If yes Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
+                document.getElementById("res2").textContent=" Hurray!! You currently scored more than 4 but <b>You have left </b>"+qleft>+ " <b>questions.Are you sure you want to submit??</b> If yes Now you will get hard questions to test your knowledge. Click on the Next Button to get our games.."
 }
 
 
